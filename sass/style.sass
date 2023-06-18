@@ -1,0 +1,179 @@
+*
+     box-sizing: border-box
+body
+     font-family: 'Roboto', sans-serif
+input, button, img
+     &:focus
+          outline: none
+img
+     max-width: 100%
+a
+     text-decoration: none
+
+.header
+     padding: 10px 0
+     background-color: #1274CF
+     color: #fff
+     &-wrap
+          display: flex
+          justify-content: space-between
+     &-navbar
+          display: flex
+          align-items: center
+          list-style: none
+          &__item
+               color: #fff
+               &:hover
+                    color: rgba(#fff, .8)
+.main
+     padding-top: 30px
+     padding-bottom: 30px
+     &-title
+          text-align: center
+          color: #7a7575
+          font-size: 28px
+          margin-bottom: 20px
+     &-subhead
+          display: flex
+          justify-content: space-between
+          align-items: flex-end
+          & button
+               border: 1px solid #aeaeae
+               padding: 0 5px
+     &-subtitle
+          font-weight: 700
+          font-size: 16px
+          color: green
+     & .dropdown .main-drop-title
+          font-weight: 700
+     &-block
+          padding-top: 10px
+          &__item
+               padding: 10px 0
+               text-align: center
+               border: 1px solid transparent
+               border-radius: 20px
+               &:hover
+                    border: 1px solid #1274CF
+          &__img
+               position: relative
+               margin: 0 auto
+               width: 70px
+               height: 70px
+
+          &__link
+               font-weight: 700
+               text-decoration: underline
+          &__title
+               color: #aeaeae
+          &__subtitle
+               color: green
+               margin-bottom: 5px
+          &__money
+               color: green
+.submenu
+     padding-bottom: 100px
+     &-wrap
+          padding: 20px 30px
+          margin: 0 auto
+          text-align: center
+          width: 600px
+          border-radius: 10px
+          background-color: #1274CF
+          display: flex
+          justify-content: space-between
+     &-link
+          color: #fff
+          &:hover
+               color: rgba(#fff, .7)
+     &-img
+          color: #fff
+@media (min-width: 320px) and (max-width: 767px)
+     .main-subhead
+          text-align: center
+     .main
+          padding-bottom: 170px
+     .submenu
+          display: none
+     .mobile-menu
+          display: block
+          position: fixed
+          bottom: 0
+          left: 0
+          right: 0
+          z-index: 50
+          & .submenu-wrap
+               padding: 10px
+               width: 100%
+               border-radius: 0
+          & .submenu-link
+               margin-right: 12px
+          & .submenu-img > svg
+               width: 26px
+     .mobile-nav
+          z-index: 2!important
+          -webkit-text-size-adjust: 100%
+          --swiper-theme-color: #007aff
+          --swiper-navigation-size: 44px
+          tab-size: 4
+          font-family: inherit
+          line-height: inherit
+          box-sizing: border-box
+          border-width: 0
+          border-style: solid
+          border-color: #e5e7eb
+          --tw-shadow: 0 0 #0000
+          --tw-ring-inset: var(--tw-empty,/*!*/ /*!*/)
+          --tw-ring-offset-width: 0px
+          --tw-ring-offset-color: #fff
+          --tw-ring-color: rgba(59, 130, 246, 0.5)
+          --tw-ring-offset-shadow: 0 0 #0000
+          --tw-ring-shadow: 0 0 #0000
+          pointer-events: none
+          visibility: hidden
+          position: fixed
+          top: 0px
+          height: 100vh
+          width: 100%
+          --tw-translate-x: 0
+          --tw-rotate: 0
+          --tw-skew-x: 0
+          --tw-skew-y: 0
+          transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+          --tw-translate-y: 100%
+          --tw-scale-x: 0
+          --tw-scale-y: 0
+          --tw-bg-opacity: 1
+          background-color: rgba(255, 255, 255, var(--tw-bg-opacity))
+          opacity: 0
+          transition-property: all
+          transition-duration: 300ms
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1)
+          z-index: 10000
+     .mobile-nav > nav > ul
+          padding-left: 0
+     .mobile-nav > nav > ul > li
+          list-style: none
+     .mobile-nav nav ul li a
+          display: block
+          border-bottom: 1px solid rgba(#cecece, .6)
+          padding-top: 1.25rem
+          padding-bottom: 1.25rem
+          padding-left: 2.5rem
+          padding-right: 2.5rem
+          transition-property: all
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1)
+          transition-duration: 150ms
+          transition-duration: 300ms
+     .mobile-nav.opened
+          pointer-events: auto
+          visibility: visible
+          --tw-translate-y: 0px
+          --tw-scale-x: 1
+          --tw-scale-y: 1
+          opacity: 1
+@media (min-width: 768px)
+     .mobile-menu
+          display: none
+     .mobile-nav
+          display: none
