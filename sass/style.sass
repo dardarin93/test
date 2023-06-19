@@ -19,10 +19,12 @@ a
           justify-content: space-between
      &-navbar
           display: flex
+
           align-items: center
           list-style: none
           &__item
                color: #fff
+
                &:hover
                     color: rgba(#fff, .8)
 .main
@@ -49,12 +51,18 @@ a
      &-block
           padding-top: 10px
           &__item
+               position: relative
                padding: 10px 0
                text-align: center
                border: 1px solid transparent
                border-radius: 20px
                &:hover
                     border: 1px solid #1274CF
+                    .main-block__plus
+                         display: block
+                         position: absolute
+                         bottom: 10px
+                         right: 10px
           &__img
                position: relative
                margin: 0 auto
@@ -71,6 +79,9 @@ a
                margin-bottom: 5px
           &__money
                color: green
+          &__plus
+               display: none
+
 .submenu
      padding-bottom: 100px
      &-wrap
@@ -84,11 +95,18 @@ a
           justify-content: space-between
      &-link
           color: #fff
+          font-size: 11px
           &:hover
                color: rgba(#fff, .7)
      &-img
           color: #fff
 @media (min-width: 320px) and (max-width: 767px)
+     .header
+          &-wrap
+               justify-content: start
+          &-navbar
+               &__item
+                    padding-left: 100px
      .main-subhead
           text-align: center
      .main
@@ -172,6 +190,8 @@ a
           --tw-scale-x: 1
           --tw-scale-y: 1
           opacity: 1
+     .main-block__item:hover .main-block__plus
+          right: 2px
 @media (min-width: 768px)
      .mobile-menu
           display: none
