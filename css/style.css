@@ -267,9 +267,6 @@ a {
     --tw-scale-y: 1;
     opacity: 1;
   }
-  .main-block__item:hover .main-block__plus {
-    right: 2px;
-  }
 }
 @media (min-width: 768px) {
   .mobile-menu {
