@@ -14,6 +14,9 @@ button
      background-color: transparent
      border: none
 .header
+     position: fixed
+     width: 100%
+     z-index: 99
      padding: 10px 0
      background-color: #1274CF
      color: #fff
@@ -41,7 +44,7 @@ button
      &-subhead
           display: flex
           justify-content: space-between
-          align-items: flex-end
+          align-items: center
           & button
                border: 1px solid #aeaeae
                padding: 0 5px
@@ -49,6 +52,7 @@ button
           font-weight: 700
           font-size: 16px
           color: green
+
      & .dropdown .main-drop-title
           font-weight: 700
      &-block
@@ -110,7 +114,10 @@ button
                display: none
 
 .submenu
-     padding-bottom: 100px
+     position: fixed
+     bottom: 10%
+     left: 50%
+     transform: translateX(-50%)
      &-wrap
           padding: 20px 30px
           margin: 0 auto
@@ -127,6 +134,21 @@ button
                color: rgba(#fff, .7)
      &-img
           color: #fff
+.welcome
+     padding: 40px
+     text-align: center
+     &-title
+          color: #1274cf
+          font-weight: 700
+     &-img
+          margin-bottom: 50px
+     &-subtitle
+          font-size: 24px
+          text-align: left
+          font-weight: 700
+     &-text
+          margin-bottom: 70px
+
 .footer
      background-color: #1274cf
      color: #fff
@@ -135,15 +157,22 @@ button
 
 @media (min-width: 320px) and (max-width: 767px)
      .header
+          position: static
           &-wrap
+               align-items: center
                justify-content: start
           &-navbar
                &__item
+                    padding-left: 30px
+
+               &__user
                     padding-left: 100px
      .main-subhead
           text-align: center
      .main
-          padding-bottom: 170px
+          padding-bottom: 20px
+          &-subtitle
+               width: 200px
      .submenu
           display: none
      .mobile-menu
@@ -162,6 +191,7 @@ button
           & .submenu-img > svg
                width: 26px
      .mobile-nav
+          padding-top: 40px
           z-index: 2!important
           -webkit-text-size-adjust: 100%
           --swiper-theme-color: #007aff
@@ -223,6 +253,19 @@ button
           --tw-scale-x: 1
           --tw-scale-y: 1
           opacity: 1
+     .dropdown
+          color: #1274cf
+          & .header-navbar__item
+               width: 100%
+               color: #1274cf
+               text-align-last: left
+          &-menu
+               width: 100%
+               border: none
+          &-item
+               color: #1274cf
+     .footer
+          padding-bottom: 120px
 @media (min-width: 768px)
      .mobile-menu
           display: none

@@ -26,6 +26,9 @@ button {
 }
 
 .header {
+  position: fixed;
+  width: 100%;
+  z-index: 99;
   padding: 10px 0;
   background-color: #1274CF;
   color: #fff;
@@ -71,9 +74,9 @@ button {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .main-subhead button {
   border: 1px solid #aeaeae;
@@ -158,7 +161,11 @@ button {
 }
 
 .submenu {
-  padding-bottom: 100px;
+  position: fixed;
+  bottom: 10%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 .submenu-wrap {
   padding: 20px 30px;
@@ -185,6 +192,26 @@ button {
   color: #fff;
 }
 
+.welcome {
+  padding: 40px;
+  text-align: center;
+}
+.welcome-title {
+  color: #1274cf;
+  font-weight: 700;
+}
+.welcome-img {
+  margin-bottom: 50px;
+}
+.welcome-subtitle {
+  font-size: 24px;
+  text-align: left;
+  font-weight: 700;
+}
+.welcome-text {
+  margin-bottom: 70px;
+}
+
 .footer {
   background-color: #1274cf;
   color: #fff;
@@ -193,19 +220,31 @@ button {
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
+  .header {
+    position: static;
+  }
   .header-wrap {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: start;
   }
   .header-navbar__item {
+    padding-left: 30px;
+  }
+  .header-navbar__user {
     padding-left: 100px;
   }
   .main-subhead {
     text-align: center;
   }
   .main {
-    padding-bottom: 170px;
+    padding-bottom: 20px;
+  }
+  .main-subtitle {
+    width: 200px;
   }
   .submenu {
     display: none;
@@ -230,6 +269,7 @@ button {
     width: 26px;
   }
   .mobile-nav {
+    padding-top: 40px;
     z-index: 2 !important;
     -webkit-text-size-adjust: 100%;
     --swiper-theme-color: #007aff;
@@ -306,6 +346,25 @@ button {
     --tw-scale-x: 1;
     --tw-scale-y: 1;
     opacity: 1;
+  }
+  .dropdown {
+    color: #1274cf;
+  }
+  .dropdown .header-navbar__item {
+    width: 100%;
+    color: #1274cf;
+    -moz-text-align-last: left;
+         text-align-last: left;
+  }
+  .dropdown-menu {
+    width: 100%;
+    border: none;
+  }
+  .dropdown-item {
+    color: #1274cf;
+  }
+  .footer {
+    padding-bottom: 120px;
   }
 }
 @media (min-width: 768px) {
