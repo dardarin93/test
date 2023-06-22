@@ -93,11 +93,12 @@
                         <li><a class="dropdown-item" href="#">Log out</a></li>
                     </ul>
                 </div> -->
-                <button class="header-navbar__item" data-bs-toggle="modal" data-bs-target="#exampleModal" type="button">
+                <button class="header-navbar__item btn header-navbar__login" data-bs-toggle="modal"
+                    data-bs-target="#exampleModal" type="button">
                     login
                 </button>
-                <button class="header-navbar__item btn " data-bs-toggle="modal" data-bs-target="#exampleModal2"
-                    type="button">
+                <button class="header-navbar__item btn header-navbar__signup" data-bs-toggle="modal"
+                    data-bs-target="#exampleModal2" type="button">
                     Sign up
                 </button>
             </ul>
@@ -786,9 +787,73 @@
                 </div>
                 <div class="submenu-text">Exchange</div>
             </a>
-
+            <!-- <a id="desktop-menu" class="submenu-link" style="margin-right: 0px;">
+                <div class="submenu-img">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
+                        class="bi bi-list" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+                    </svg>
+                </div>
+                <div class="submenu-text">Menu</div>
+            </a> -->
         </div>
     </div>
+    <!-- <div class="desktop-nav">
+        <nav class="desktop-nav-menu">
+            <ul>
+                <div class="dropdown ">
+                    <button class="header-navbar__item btn " type="button">
+                        Account
+                    </button>
+                </div>
+                <div class="dropdown ">
+                    <button class="header-navbar__item btn dropdown-toggle" type="button" id="dropdownMenuButton1"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Products
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1" style="position: none !important;">
+                        <li><a class="dropdown-item" href="#">Profile</a></li>
+                        <li><a class="dropdown-item" href="#">Verification</a></li>
+                        <li><a class="dropdown-item" href="#">Referrals</a></li>
+                        <li><a class="dropdown-item" href="#">History</a></li>
+                        <li><a class="dropdown-item" href="#">Deposit</a></li>
+                        <li><a class="dropdown-item" href="#">Withdraw</a></li>
+                        <li><a class="dropdown-item" href="#">Exchange</a></li>
+                        <li><a class="dropdown-item" href="#">Log out</a></li>
+                    </ul>
+                </div>
+                <div class="dropdown">
+                    <button class="header-navbar__item btn dropdown-toggle" type="button" id="dropdownMenuButton1"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Resources
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1" style="position: none !important;">
+                        <li><a class="dropdown-item" href="#">Profile</a></li>
+                        <li><a class="dropdown-item" href="#">Verification</a></li>
+                        <li><a class="dropdown-item" href="#">Referrals</a></li>
+
+                    </ul>
+                </div>
+                <div class="dropdown ">
+                    <button class="header-navbar__item btn dropdown-toggle" type="button" id="dropdownMenuButton1"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Help
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1" style="position: none !important;">
+                        <li><a class="dropdown-item" href="#">Profile</a></li>
+                        <li><a class="dropdown-item" href="#">Verification</a></li>
+                        <li><a class="dropdown-item" href="#">Referrals</a></li>
+
+                    </ul>
+                </div>
+                <div class="dropdown ">
+                    <button class="header-navbar__item btn ">Log out</button>
+                </div>
+
+            </ul>
+        </nav>
+    </div> -->
     <div class="mobile-nav">
         <nav>
             <ul>
@@ -822,11 +887,7 @@
                         <li><a class="dropdown-item" href="#">Profile</a></li>
                         <li><a class="dropdown-item" href="#">Verification</a></li>
                         <li><a class="dropdown-item" href="#">Referrals</a></li>
-                        <li><a class="dropdown-item" href="#">History</a></li>
-                        <li><a class="dropdown-item" href="#">Deposit</a></li>
-                        <li><a class="dropdown-item" href="#">Withdraw</a></li>
-                        <li><a class="dropdown-item" href="#">Exchange</a></li>
-                        <li><a class="dropdown-item" href="#">Log out</a></li>
+
                     </ul>
                 </div>
                 <div class="dropdown ">
@@ -838,11 +899,7 @@
                         <li><a class="dropdown-item" href="#">Profile</a></li>
                         <li><a class="dropdown-item" href="#">Verification</a></li>
                         <li><a class="dropdown-item" href="#">Referrals</a></li>
-                        <li><a class="dropdown-item" href="#">History</a></li>
-                        <li><a class="dropdown-item" href="#">Deposit</a></li>
-                        <li><a class="dropdown-item" href="#">Withdraw</a></li>
-                        <li><a class="dropdown-item" href="#">Exchange</a></li>
-                        <li><a class="dropdown-item" href="#">Log out</a></li>
+
                     </ul>
                 </div>
                 <div class="dropdown ">
@@ -997,6 +1054,9 @@
     <script>
         document.querySelector('#mobile-menu').onclick = function () {
             document.querySelector('.mobile-nav').classList.toggle('opened');
+        }
+        document.querySelector('#desktop-menu').onclick = function () {
+            document.querySelector('.desktop-nav').classList.toggle('desktop-opened');
         }
 
     </script>

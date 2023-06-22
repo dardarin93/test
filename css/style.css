@@ -28,7 +28,7 @@ button {
 .header {
   position: fixed;
   width: 100%;
-  z-index: 99;
+  z-index: 80;
   padding: 10px 0;
   background-color: #1274CF;
   color: #fff;
@@ -54,7 +54,22 @@ button {
   color: #fff;
 }
 .header-navbar__item:hover {
-  color: rgba(255, 255, 255, 0.8);
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.header-navbar__login {
+  border: 1px solid transparent;
+}
+.header-navbar__login:hover {
+  border: 1px solid #fff;
+  background-color: transparent;
+}
+.header-navbar__signup {
+  border: 1px solid transparent;
+}
+.header-navbar__signup:hover {
+  border: 1px solid #fff;
+  background-color: transparent;
 }
 
 .main {
@@ -162,6 +177,7 @@ button {
 
 .submenu {
   position: fixed;
+  z-index: 99;
   bottom: 10%;
   left: 50%;
   -webkit-transform: translateX(-50%);
@@ -190,6 +206,29 @@ button {
 }
 .submenu-img {
   color: #fff;
+}
+
+.desktop-nav {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 90;
+  background-color: white;
+  color: #000;
+}
+.desktop-nav-menu {
+  width: 600px;
+  margin: 0 auto;
+}
+.desktop-nav-menu ul {
+  padding-top: 60px;
+  padding-left: 0;
+}
+.desktop-nav-menu ul button {
+  color: #1274CF;
 }
 
 .welcome {
@@ -232,7 +271,7 @@ button {
             justify-content: start;
   }
   .header-navbar__item {
-    padding-left: 30px;
+    padding-left: 20px;
   }
   .header-navbar__user {
     padding-left: 100px;
@@ -269,7 +308,7 @@ button {
     width: 26px;
   }
   .mobile-nav {
-    padding-top: 40px;
+    padding-top: 20px;
     z-index: 2 !important;
     -webkit-text-size-adjust: 100%;
     --swiper-theme-color: #007aff;
@@ -325,6 +364,7 @@ button {
   }
   .mobile-nav nav ul li a {
     display: block;
+    background-color: #f8f8f8;
     border-bottom: 1px solid rgba(206, 206, 206, 0.6);
     padding-top: 1.25rem;
     padding-bottom: 1.25rem;
@@ -352,13 +392,18 @@ button {
   }
   .dropdown .header-navbar__item {
     width: 100%;
-    color: #1274cf;
+    color: #0d6efd;
     -moz-text-align-last: left;
          text-align-last: left;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    padding-left: 2.5rem;
+    border-bottom: 1px solid rgba(206, 206, 206, 0.6);
   }
   .dropdown-menu {
     width: 100%;
     border: none;
+    padding-top: 0;
   }
   .dropdown-item {
     color: #1274cf;
